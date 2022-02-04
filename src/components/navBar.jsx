@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
-import { BiCart } from "react-icons/bi";
 import Header from "./Header";
+import Cart from "./CartWidget";
 
 function navBar() {
   return (
@@ -117,16 +117,7 @@ function navBar() {
                     </ul>
                   </div>
                 </li>
-                <li className="  nav-item">
-                  <a className="nav-link active nav-color" aria-current="page" href="#">
-                    <BiCart
-                      style={{
-                        width: "65",
-                        height: "40",
-                      }}
-                    />
-                  </a>
-                </li>
+                <Cart />
               </ul>
             </div>
           </div>
