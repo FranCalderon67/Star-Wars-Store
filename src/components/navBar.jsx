@@ -1,21 +1,12 @@
 import React from "react";
 import "../App.css";
 import { BiCart } from "react-icons/bi";
+import Header from "./Header";
 
 function navBar() {
   return (
     <>
-      <header>
-        <div className="gridHead">
-          <a className="logo" href="#">
-            <img
-              className="animate__animated animate__flip"
-              src={require("../imagenes/logo.png")}
-              alt="ERROR"
-            ></img>
-          </a>
-        </div>
-      </header>
+      <Header />
 
       <div className="navFlex">
         <nav className="navbar navbar-expand-lg navbar-dark ">
@@ -94,7 +85,7 @@ function navBar() {
                       </li>
                       <li>
                         <a className="dropdown-item" href="#">
-                          Busos
+                          Buzos
                         </a>
                       </li>
                     </ul>
