@@ -11,8 +11,3 @@ function App() {
 }
 
 export default App;
-// NavBar();
-// ItemList();
-
-// export default NavBar;
-// export { ItemList };
