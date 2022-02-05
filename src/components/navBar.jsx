@@ -2,8 +2,9 @@ import React from "react";
 import "../App.css";
 import Header from "./Header";
 import Cart from "./CartWidget";
+import ItemList from "./ItemListContainer";
 
-function navBar() {
+function NavBar() {
   return (
     <>
       <Header />
@@ -127,4 +128,4 @@ function navBar() {
   );
 }
 
-export default navBar;
+export default NavBar;

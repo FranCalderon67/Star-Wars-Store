@@ -45,3 +45,13 @@
   border-right: solid 0.5px #ffffff;
   background-color: unset;
 }
+
+.flexPelicula {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.portadaPelicula {
+  margin: 1rem 1rem 1rem 1rem;
+}

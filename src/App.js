@@ -1,5 +1,18 @@
-import navBar from "./components/navBar";
+import NavBar from "./components/NavBar";
+import ItemList from "./components/ItemListContainer";
 
-navBar();
+function App() {
+  return (
+    <>
+      <NavBar />
+      <ItemList title="Películas" />
+    </>
+  );
+}
 
-export default navBar;
+export default App;
+// NavBar();
+// ItemList();
+
+// export default NavBar;
+// export { ItemList };
