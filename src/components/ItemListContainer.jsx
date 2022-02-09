@@ -14,9 +14,14 @@ function ItemList(props) {
         {props.title}
       </h1>
       <div className="flexPelicula">
-        <img className="portadaPelicula" src={require("../imagenes/episodio1.jpg")} alt="ERROR" />
-        <img className="portadaPelicula" src={require("../imagenes/episodio2.jpg")} alt="ERROR" />
-        <img className="portadaPelicula" src={require("../imagenes/episodio3.jpg")} alt="ERROR" />
+        <div className="cardPelicula">
+          <img
+            className="portadaPelicula"
+            src={require("../imagenes/peliculas/episodio1.jpg")}
+            alt="ERROR"
+          />
+          <div>Precio $100</div>
+        </div>
       </div>
     </>
   );

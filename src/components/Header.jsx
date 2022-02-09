@@ -8,7 +8,7 @@ function Header() {
         <a className="logo" href="#">
           <img
             className="animate__animated animate__flip"
-            src={require("../imagenes/logo.png")}
+            src={require("../imagenes/pagina/logo.png")}
             alt="ERROR"
           ></img>
         </a>

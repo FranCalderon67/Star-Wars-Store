@@ -1,14 +1,10 @@
 import React from "react";
 import "../App.css";
-import Header from "./Header";
 import Cart from "./CartWidget";
-import ItemList from "./ItemListContainer";
 
 function NavBar() {
   return (
     <>
-      <Header />
-
       <div className="navFlex">
         <nav className="navbar navbar-expand-lg navbar-dark ">
           <div className="container-fluid ">
