@@ -45,6 +45,9 @@
   border-right: solid 0.5px #ffffff;
   background-color: unset;
 }
+.card {
+  margin: 2rem 0 0 0;
+}
 
 .flexPelicula {
   display: flex;
@@ -58,7 +61,12 @@
   color: white;
 }
 
-.portadaPelicula {
-  margin: 1rem 1rem 1rem 1rem;
-  height: 230px;
+.contador {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.card-body {
+  background-color: black;
+  text-align: center;
 }
