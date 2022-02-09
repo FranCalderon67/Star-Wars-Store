@@ -3,10 +3,14 @@ import React, { useState } from "react";
 function Contador({ stock, initial }) {
   const [contador, setContador] = useState(0);
   const incrementar = () => {
-    setContador(contador + 1);
+    if (contador < stock) {
+      setContador(contador + 1);
+    }
   };
   const restar = () => {
-    setContador(contador - 1);
+    if (contador > 0) {
+      setContador(contador - 1);
+    }
   };
   return (
     <>
