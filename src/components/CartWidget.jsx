@@ -1,7 +1,7 @@
 import React from "react";
 import { BiCart } from "react-icons/bi";
 
-const Cart = () => {
+const CartWidget = () => {
   return (
     <li className="  nav-item">
       <a className="nav-link active nav-color" aria-current="page" href="#">
@@ -16,4 +16,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default CartWidget;

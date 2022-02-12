@@ -1,5 +1,5 @@
 import NavBar from "./components/NavBar";
-import ItemList from "./components/ItemListContainer";
+import ItemListContainer from "./components/ItemListContainer";
 import Header from "./components/Header";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <>
       <Header />
       <NavBar />
-      <ItemList title="Películas" />
+      <ItemListContainer title="Películas" />
     </>
   );
 }

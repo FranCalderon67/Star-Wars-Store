@@ -1,7 +1,8 @@
 import React from "react";
 import "../App.css";
-import Contador from "./ItemCount";
-function ItemList(props) {
+import ItemCount from "./ItemCount";
+import { peliculas } from "./productos";
+function ItemListContainer(props) {
   return (
     <>
       <h1
@@ -16,15 +17,11 @@ function ItemList(props) {
       </h1>
       <section className="flexPelicula">
         <div className="card" style={{ width: "18rem" }}>
-          <img
-            src={require("../imagenes/peliculas/episodio1.jpg")}
-            className="card-img-top"
-            alt="ERROR"
-          />
+          <img src={peliculas[0].imagen} className="card-img-top" alt="ERROR" />
           <div className="card-body">
-            <h5 className="card-title cardPelicula">Episodio I : La amenza fantasma</h5>
+            <h5 className="card-title cardPelicula">{peliculas[0].name}</h5>
             <p className="card-text">
-              <Contador stock={5} initial={1} />
+              <ItemCount stock={5} initial={1} />
             </p>
             <p className="cardPelicula">$500</p>
             <a href="#" className="btn btn-primary">
@@ -33,7 +30,7 @@ function ItemList(props) {
           </div>
         </div>
 
-        <div className="card" style={{ width: "18rem" }}>
+        {/* <div className="card" style={{ width: "18rem" }}>
           <img
             src={require("../imagenes/peliculas/episodio2.jpg")}
             className="card-img-top"
@@ -209,10 +206,10 @@ function ItemList(props) {
               Agregar al Carrito
             </a>
           </div>
-        </div>
+        </div> */}
       </section>
     </>
   );
 }
 
-export default ItemList;
+export default ItemListContainer;

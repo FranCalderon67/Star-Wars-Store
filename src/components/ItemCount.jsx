@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Contador({ stock, initial }) {
+function ItemCount({ stock, initial }) {
   const [contador, setContador] = useState(0);
   const incrementar = () => {
     if (contador < stock) {
@@ -27,4 +27,4 @@ function Contador({ stock, initial }) {
   );
 }
 
-export default Contador;
+export default ItemCount;
