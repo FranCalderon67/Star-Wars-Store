@@ -1,213 +1,35 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import "../App.css";
-import ItemCount from "./ItemCount";
-import { peliculas } from "./productos";
-function ItemListContainer(props) {
+import ItemList from "./ItemList";
+import { traerProductos } from "./productos";
+
+function ItemListContainer() {
+  const [productos, setProductos] = useState([]);
+  const [cargando, setCargando] = useState(true);
+
+  useEffect(() => {
+    traerProductos
+      .then((res) => {
+        setProductos(res);
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+      .finally(() => {
+        setCargando(false);
+      });
+  }, []);
+
   return (
     <>
-      <h1
-        style={{
-          color: "white",
-          font: "70",
-          textAlign: "center",
-          margin: "1.5rem 0 1rem 0",
-        }}
-      >
-        {props.title}
-      </h1>
-      <section className="flexPelicula">
-        <div className="card" style={{ width: "18rem" }}>
-          <img src={peliculas[0].imagen} className="card-img-top" alt="ERROR" />
-          <div className="card-body">
-            <h5 className="card-title cardPelicula">{peliculas[0].name}</h5>
-            <p className="card-text">
-              <ItemCount stock={5} initial={1} />
-            </p>
-            <p className="cardPelicula">$500</p>
-            <a href="#" className="btn btn-primary">
-              Agregar al Carrito
-            </a>
-          </div>
-        </div>
-
-        {/* <div className="card" style={{ width: "18rem" }}>
-          <img
-            src={require("../imagenes/peliculas/episodio2.jpg")}
-            className="card-img-top"
-            alt="ERROR"
-          />
-          <div className="card-body">
-            <h5 className="card-title cardPelicula">Episodio II : La guerra de los clones</h5>
-            <p className="card-text">
-              <Contador stock={5} initial={1} />
-            </p>
-            <p className="cardPelicula">$500</p>
-            <a href="#" className="btn btn-primary">
-              Agregar al Carrito
-            </a>
-          </div>
-        </div>
-
-        <div className="card" style={{ width: "18rem" }}>
-          <img
-            src={require("../imagenes/peliculas/episodio3.jpg")}
-            className="card-img-top"
-            alt="ERROR"
-          />
-          <div className="card-body">
-            <h5 className="card-title cardPelicula">Episodio III : La Venganza de los Sith</h5>
-            <p className="card-text">
-              <Contador stock={5} initial={1} />
-            </p>
-            <p className="cardPelicula">$500</p>
-            <a href="#" className="btn btn-primary">
-              Agregar al Carrito
-            </a>
-          </div>
-        </div>
-
-        <div className="card" style={{ width: "18rem" }}>
-          <img
-            src={require("../imagenes/peliculas/episodio4.jpg")}
-            className="card-img-top"
-            alt="ERROR"
-          />
-          <div className="card-body">
-            <h5 className="card-title cardPelicula">Episodio IV : Una nueva esperanza</h5>
-            <p className="card-text">
-              <Contador stock={5} initial={1} />
-            </p>
-            <p className="cardPelicula">$500</p>
-            <a href="#" className="btn btn-primary">
-              Agregar al Carrito
-            </a>
-          </div>
-        </div>
-
-        <div className="card" style={{ width: "18rem" }}>
-          <img
-            src={require("../imagenes/peliculas/episodio5.jpg")}
-            className="card-img-top"
-            alt="ERROR"
-          />
-          <div className="card-body">
-            <h5 className="card-title cardPelicula">Episodio V : El imperio contrataca</h5>
-            <p className="card-text">
-              <Contador stock={5} initial={1} />
-            </p>
-            <p className="cardPelicula">$500</p>
-            <a href="#" className="btn btn-primary">
-              Agregar al Carrito
-            </a>
-          </div>
-        </div>
-
-        <div className="card" style={{ width: "18rem" }}>
-          <img
-            src={require("../imagenes/peliculas/episodio6.jpg")}
-            className="card-img-top"
-            alt="ERROR"
-          />
-          <div className="card-body">
-            <h5 className="card-title cardPelicula">Episodio VI : El retorno del Jedi</h5>
-            <p className="card-text">
-              <Contador stock={5} initial={1} />
-            </p>
-            <p className="cardPelicula">$500</p>
-            <a href="#" className="btn btn-primary">
-              Agregar al Carrito
-            </a>
-          </div>
-        </div>
-
-        <div className="card" style={{ width: "18rem" }}>
-          <img
-            src={require("../imagenes/peliculas/episodio7.jpg")}
-            className="card-img-top"
-            alt="ERROR"
-          />
-          <div className="card-body">
-            <h5 className="card-title cardPelicula">Episodio VII : El despertar de la fuerza</h5>
-            <p className="card-text">
-              <Contador stock={5} initial={1} />
-            </p>
-            <p className="cardPelicula">$500</p>
-            <a href="#" className="btn btn-primary">
-              Agregar al Carrito
-            </a>
-          </div>
-        </div>
-
-        <div className="card" style={{ width: "18rem" }}>
-          <img
-            src={require("../imagenes/peliculas/episodio8.jpg")}
-            className="card-img-top"
-            alt="ERROR"
-          />
-          <div className="card-body">
-            <h5 className="card-title cardPelicula">Episodio VIII : Los ultimos Jedi</h5>
-            <p className="card-text">
-              <Contador stock={5} initial={1} />
-            </p>
-            <p className="cardPelicula">$500</p>
-            <a href="#" className="btn btn-primary">
-              Agregar al Carrito
-            </a>
-          </div>
-        </div>
-        <div className="card" style={{ width: "18rem" }}>
-          <img
-            src={require("../imagenes/peliculas/episodio9.jpeg")}
-            className="card-img-top"
-            alt="ERROR"
-          />
-          <div className="card-body">
-            <h5 className="card-title cardPelicula">Episodio IX : El ascenso de Skywalker</h5>
-            <p className="card-text">
-              <Contador stock={5} initial={1} />
-            </p>
-            <p className="cardPelicula">$500</p>
-            <a href="#" className="btn btn-primary">
-              Agregar al Carrito
-            </a>
-          </div>
-        </div>
-        <div className="card" style={{ width: "18rem" }}>
-          <img
-            src={require("../imagenes/peliculas/rogueone.jpg")}
-            className="card-img-top"
-            alt="ERROR"
-          />
-          <div className="card-body">
-            <h5 className="card-title cardPelicula">Rogue One: Una historia de Star Wars</h5>
-            <p className="card-text">
-              <Contador stock={5} initial={1} />
-            </p>
-            <p className="cardPelicula">$500</p>
-            <a href="#" className="btn btn-primary">
-              Agregar al Carrito
-            </a>
-          </div>
-        </div>
-
-        <div className="card" style={{ width: "18rem" }}>
-          <img
-            src={require("../imagenes/peliculas/solomovie.jpg")}
-            className="card-img-top"
-            alt="ERROR"
-          />
-          <div className="card-body">
-            <h5 className="card-title cardPelicula">Han Solo</h5>
-            <p className="card-text">
-              <Contador stock={5} initial={1} />
-            </p>
-            <p className="cardPelicula">$500</p>
-            <a href="#" className="btn btn-primary">
-              Agregar al Carrito
-            </a>
-          </div>
-        </div> */}
-      </section>
+      {cargando ? (
+        <img className="halcon" src={require("../imagenes/pagina/halcon.png")} alt="ERROR"></img>
+      ) : (
+        <section>
+          <ItemList />
+        </section>
+      )}
     </>
   );
 }

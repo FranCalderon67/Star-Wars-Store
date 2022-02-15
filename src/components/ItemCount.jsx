@@ -13,17 +13,15 @@ function ItemCount({ stock, initial }) {
     }
   };
   return (
-    <>
-      <div className="contador">
-        <button type="button" className="btn btn-dark" onClick={incrementar}>
-          +
-        </button>
-        <p style={{ color: "white" }}>{contador}</p>
-        <button type="button" className="btn btn-dark" onClick={restar}>
-          -
-        </button>
-      </div>
-    </>
+    <div className="contador">
+      <button type="button" className="btn btn-dark" onClick={restar}>
+        -
+      </button>
+      <p style={{ color: "white" }}>{contador}</p>
+      <button type="button" className="btn btn-dark" onClick={incrementar}>
+        +
+      </button>
+    </div>
   );
 }
 

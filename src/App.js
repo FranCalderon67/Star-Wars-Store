@@ -7,7 +7,7 @@ function App() {
     <>
       <Header />
       <NavBar />
-      <ItemListContainer title="Películas" />
+      <ItemListContainer />
     </>
   );
 }

@@ -49,7 +49,7 @@
   margin: 2rem 0 0 0;
 }
 
-.flexPelicula {
+.flexContainer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -69,4 +69,42 @@
 .card-body {
   background-color: black;
   text-align: center;
+}
+
+.halcon {
+  position: absolute;
+  z-index: 1;
+  width: 700px;
+  animation-name: vuelo;
+  animation-duration: 3.5s;
+  opacity: 0;
+  z-index: -1;
+}
+
+@keyframes vuelo {
+  0% {
+    z-index: 1;
+    opacity: 1;
+    transform: translateX(-200px);
+  }
+  50% {
+    z-index: 1;
+    opacity: 1;
+    transform: translateX(500px);
+  }
+
+  100% {
+    z-index: 1;
+    transform: translateX(1024px);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+    border-left: unset;
+    border-right: unset;
+  }
+  .navFlex {
+    justify-content: flex-start;
+  }
 }

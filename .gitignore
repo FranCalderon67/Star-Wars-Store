@@ -23,7 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 
-src/components/productos.js
+
 src/imagenes/naves
 src/imagenes/figuras
 src/imagenes/ropa
