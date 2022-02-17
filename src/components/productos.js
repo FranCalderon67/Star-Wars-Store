@@ -5,6 +5,7 @@ const ropa = [
     color: "blanco",
     stock: 10,
     precio: 1000,
+    type: "remera",
     imagen: "https://ideasmvd.com.uy/wp-content/uploads/2020/12/star-wars-remera-blanca-ideas-mvd.jpg",
   },
 
@@ -14,6 +15,7 @@ const ropa = [
     color: "gris",
     stock: 10,
     precio: 1000,
+    type: "remera",
     imagen: "https://d3ugyf2ht6aenh.cloudfront.net/stores/342/641/products/star-wars01-gris-melange1-116516acf69e71d87816235626139862-1024-1024.png",
   },
 
@@ -23,6 +25,7 @@ const ropa = [
     color: "negro",
     stock: 10,
     precio: 1000,
+    type: "remera",
     imagen: "https://tap-multimedia-1172.nyc3.digitaloceanspaces.com/productimage/19786/3720000000231.jpg",
   },
   {
@@ -31,6 +34,7 @@ const ropa = [
     color: "hanSolo",
     stock: 10,
     precio: 1200,
+    type: "remera",
     imagen: "http://d3ugyf2ht6aenh.cloudfront.net/stores/064/882/products/remera_certified_estampados_mockup111-d50eb0a855384adf6915943214374931-640-0.jpg",
   },
   {
@@ -39,6 +43,7 @@ const ropa = [
     color: "bb8",
     stock: 10,
     precio: 1200,
+    type: "remera",
     imagen: "https://http2.mlstatic.com/D_964357-MLA48467103044_122021-O.jpg",
   },
   {
@@ -47,6 +52,7 @@ const ropa = [
     color: "r2d2",
     stock: 10,
     precio: 1500,
+    type: "remera",
     imagen: "https://mimilandtiendafriki.com.ar/wp-content/uploads/2021/02/adrogue-star-wars-mimi-land-adrogue-babyjoda.jpg",
   },
   {
@@ -55,6 +61,7 @@ const ropa = [
     color: "stormtrooper",
     stock: 10,
     precio: 1500,
+    type: "remera",
     imagen: "https://d3ugyf2ht6aenh.cloudfront.net/stores/122/451/products/star-2-1cc90b2909ca2378a815572586666975-1024-1024.jpg",
   },
 
@@ -64,6 +71,7 @@ const ropa = [
     color: "blanco",
     stock: 10,
     precio: 2000,
+    type: "buzo",
     imagen: "https://http2.mlstatic.com/D_975726-MLA46468011063_062021-O.jpg",
   },
 
@@ -73,6 +81,7 @@ const ropa = [
     color: "gris",
     stock: 10,
     precio: 2000,
+    type: "buzo",
     imagen: "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/030/513/products/whatsapp-image-2021-06-05-at-13-24-581-4b728d2290700597d416229104909444-640-0.jpeg",
   },
 
@@ -82,6 +91,7 @@ const ropa = [
     color: "negro",
     stock: 10,
     precio: 2000,
+    type: "buzo",
     imagen: "http://d3ugyf2ht6aenh.cloudfront.net/stores/029/842/products/cr-negro-millennium-falcon1-a9c21888b35407d57f16254979432091-640-0.png",
   },
 ];
@@ -89,127 +99,145 @@ const ropa = [
 const figura = [
   {
     id: 1,
-    personaje: "chewbacca",
-    tipo: "legendario",
+    name: "Chewbacca",
+    type: "legendario",
     stock: 10,
     precio: 1500,
+    imagen: "https://freakworldcanarias.com/2937-large_default/figura-chewbacca-star-wars-.jpg",
   },
 
   {
     id: 2,
-    personaje: "darthmaul",
-    tipo: "sith",
+    name: "Darth Maul",
+    type: "sith",
     stock: 10,
     precio: 1500,
+    imagen: "https://www.hasbro.com/common/productimages/es_MX/301C5F9269814B66A2AF59DE95AC6603/16B6E73ED77E42219692B666A0492507.jpg",
   },
 
   {
     id: 3,
-    personaje: "darthvader",
-    tipo: "sith",
+    name: "Darth Vader",
+    type: "sith",
     stock: 10,
     precio: 1800,
+    imagen: "https://static.fnac-static.com/multimedia/Images/ES/NR/13/26/15/1386003/1540-1/tsp20170828132243/Figura-Star-Wars-Episodio-IV-Darth-Vader-19-5cm.jpg",
   },
   {
     id: 4,
-    personaje: "leia",
-    tipo: "legendario",
+    name: "Leia",
+    type: "legendario",
     stock: 10,
     precio: 1500,
+    imagen: "https://www.crazyproders.com/4708-thickbox_default/sideshow-star-wars-princesse-leia-premium-format.jpg",
   },
   {
     id: 5,
-    personaje: "luke",
-    tipo: "jedi",
+    name: "Luke Skywalker",
+    type: "jedi",
     stock: 10,
     precio: 1800,
+    imagen: "https://collectoys.es/10032-large_default/figura-luke-skywalker-return-of-the-jedi-artfx-kotobukiya.jpg",
   },
   {
     id: 6,
-    personaje: "obiwan",
-    tipo: "jedi",
+    name: "Obi-Wan Kenobi",
+    type: "jedi",
     stock: 10,
     precio: 1800,
+    imagen:
+      "https://figurascoleccionables.es/wp-content/uploads/2020/10/Figura-de-Obi-Wan-Kenobi-Episodio-IV-de-Star-Wars-de-Sideshow-Figuras-de-acci%C3%B3n-y-mu%C3%B1ecos-de-Obi-Wan-Kenobi-de-Star-Wars-177x300.jpg",
   },
   {
     id: 7,
-    personaje: "yoda",
-    tipo: "jedi",
+    name: "Yoda",
+    type: "jedi",
     stock: 10,
     precio: 1800,
+    imagen: "https://images-eu.ssl-images-amazon.com/images/I/416SY70vDfL._SS300_.jpg",
   },
 ];
 
 const sable = [
   {
     id: 1,
-    personaje: "darthmaul",
+    name: "Sable de Darth Maul",
     tipo: "sith",
     stock: 10,
     precio: 500,
+    imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXs2aZTc1vLSNXr54KdJ_S9Jj5yTQ9Nymh_aLG6v5nZa1YTDnnbcTThp6x42K-bYqccZA&usqp=CAU",
   },
 
   {
     id: 2,
-    personaje: "darthvader",
+    name: "Sable de Darth Vader",
     tipo: "sith",
     stock: 10,
     precio: 500,
+    imagen: "https://m.media-amazon.com/images/I/61cBFzr9imL._AC_SX425_.jpg",
   },
   {
     id: 3,
-    personaje: "kyloren",
+    name: "Sable de Kylo Ren",
     tipo: "sith",
     stock: 10,
     precio: 500,
+    imagen: "https://simaro.co/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/S/t/Star-Wars-Kylo-Ren-Electrnica-Rojo-Sable-de-luz-de-Juguete-para-nios-de-6-y-Hasta-.jpeg",
   },
   {
     id: 4,
-    personaje: "macewindu",
+    name: "Sable de Mace Windu",
     tipo: "jedi",
     stock: 10,
     precio: 500,
+    imagen: "https://www.aceroymagia.com/Images/articulo/sable-de-luz-mace-windu-starwars/01-sable-de-luz-mace-windu-starwars.jpg",
   },
   {
     id: 5,
-    personaje: "obiwan",
+    name: "Sable de Obi-Wan Kenobi",
     tipo: "jedi",
     stock: 10,
     precio: 500,
+    imagen: "https://m.media-amazon.com/images/I/71FfhinHHcL._AC_SX425_.jpg",
   },
   {
     id: 6,
-    personaje: "yoda",
+    name: "Sable de Yoda",
     tipo: "jedi",
     stock: 10,
     precio: 500,
+    imagen: "https://m.media-amazon.com/images/I/51atZw6asqL._AC_SL1000_.jpg",
   },
 ];
 
 const naves = [
   {
     id: 1,
-    name: "cazatie",
+    name: "Caza Tie",
     precio: 1000,
     stock: 10,
+    imagen: "https://m.media-amazon.com/images/I/815QWW4mzbL._AC_UL320_.jpg",
   },
   {
     id: 2,
-    name: "darthVaderTie",
+    name: "Caza Tie de Darth Vader",
     precio: 1500,
     stock: 10,
+    imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqtOGtpCYVH_6FBnIznRjmb8GkQN8xrKf4ew&usqp=CAU",
   },
   {
     id: 3,
-    name: "halcon",
+    name: "Halcon Milenario",
     precio: 1500,
     stock: 10,
+    imagen: "https://maxitec.vteximg.com.br/arquivos/ids/164212-1000-1000/maxitec-fascinations-halcon-milenario-icx201-1.jpg?v=637688892044100000",
   },
   {
     id: 4,
-    name: "xwing",
+    name: "X-Wing",
     precio: 1500,
     stock: 10,
+    imagen: "https://i.pinimg.com/originals/91/bc/27/91bc275b5b5b914d149e88b292d588b9.jpg",
   },
 ];
 
@@ -295,15 +323,36 @@ const peliculas = [
   },
 ];
 
-const traerProductos = new Promise((resolve, reject) => {
+const traerRopa = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(ropa);
+  }, 3500);
+});
+const traerFigura = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(figura);
+  }, 3500);
+});
+const traerSable = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(sable);
+  }, 3500);
+});
+const traerNave = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(naves);
+  }, 3500);
+});
+const traerPeliculas = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve(peliculas);
   }, 3500);
 });
 
-export { ropa };
-export { figura };
-export { sable };
-export { naves };
 export { peliculas };
-export { traerProductos };
+
+export { traerRopa };
+export { traerFigura };
+export { traerSable };
+export { traerNave };
+export { traerPeliculas };

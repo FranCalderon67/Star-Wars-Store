@@ -10,6 +10,13 @@
 * body {
   background-image: url(./imagenes/pagina/BG__site.jpeg);
 }
+.titulos {
+  color: #ffffff;
+  font-family: "IM Fell Double Pica", serif;
+  font-size: 50px;
+  text-align: center;
+  margin: 2rem 0 1rem 0;
+}
 
 .gridHead {
   display: grid;

@@ -1,59 +1,41 @@
 import React from "react";
-// import { ItemPeliculas, ItemRopa } from "./Item.jsx";
 import Item from "./Item";
-function ItemList({ peliculas }) {
+function ItemList({ ropa, figura, sable, nave, peliculas }) {
   return (
     <>
-      <h1
-        style={{
-          color: "white",
-          font: "70",
-          textAlign: "center",
-          margin: "1.5rem 0 1rem 0",
-        }}
-      >
-        Películas
-      </h1>
+      <div className="flexContainer">
+        {ropa &&
+          ropa.map((p) => {
+            return <Item item={p} />;
+          })}
+      </div>
+      <div className="flexContainer">
+        {figura &&
+          figura.map((p) => {
+            return <Item item={p} />;
+          })}
+      </div>
+      <div className="flexContainer">
+        {sable &&
+          sable.map((p) => {
+            return <Item item={p} />;
+          })}
+      </div>
+      <div className="flexContainer">
+        {nave &&
+          nave.map((p) => {
+            return <Item item={p} />;
+          })}
+      </div>
+
       <div className="flexContainer">
         {peliculas &&
           peliculas.map((p) => {
             return <Item item={p} />;
           })}
       </div>
-      {/* <h1
-        style={{
-          color: "white",
-          font: "70",
-          textAlign: "center",
-          margin: "1.5rem 0 1rem 0",
-        }}
-      >
-        Ropa
-      </h1>
-      <div className="flexContainer">
-        <ItemRopa />
-      </div> */}
     </>
   );
 }
-
-// const ItemList = () =>
-//   peliculas.map(({ id, imagen, name, stock, precio }) => (
-//     <div key={id} className="card " style={{ width: "18rem" }}>
-//       <div>
-//         <img className="card-img-top" src={imagen} alt="ERROR" />
-//       </div>
-//       <div className="card-body">
-//         <h5 className="card-title cardPelicula">{name}</h5>
-//         <div className="card-text">
-//           <ItemCount stock={stock} initial={1} />
-//         </div>
-//         <p className="cardPelicula">$ {precio}</p>
-//         <button className="btn btn-primary">Agregar al Carrito</button>
-//       </div>
-//     </div>
-//   ));
-
-// export default ItemList;
 
 export default ItemList;
