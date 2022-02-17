@@ -5,8 +5,7 @@ const ropa = [
     color: "blanco",
     stock: 10,
     precio: 1000,
-    imagen:
-      "https://ideasmvd.com.uy/wp-content/uploads/2020/12/star-wars-remera-blanca-ideas-mvd.jpg",
+    imagen: "https://ideasmvd.com.uy/wp-content/uploads/2020/12/star-wars-remera-blanca-ideas-mvd.jpg",
   },
 
   {
@@ -15,8 +14,7 @@ const ropa = [
     color: "gris",
     stock: 10,
     precio: 1000,
-    imagen:
-      "https://d3ugyf2ht6aenh.cloudfront.net/stores/342/641/products/star-wars01-gris-melange1-116516acf69e71d87816235626139862-1024-1024.png",
+    imagen: "https://d3ugyf2ht6aenh.cloudfront.net/stores/342/641/products/star-wars01-gris-melange1-116516acf69e71d87816235626139862-1024-1024.png",
   },
 
   {
@@ -25,8 +23,7 @@ const ropa = [
     color: "negro",
     stock: 10,
     precio: 1000,
-    imagen:
-      "https://tap-multimedia-1172.nyc3.digitaloceanspaces.com/productimage/19786/3720000000231.jpg",
+    imagen: "https://tap-multimedia-1172.nyc3.digitaloceanspaces.com/productimage/19786/3720000000231.jpg",
   },
   {
     id: 4,
@@ -34,8 +31,7 @@ const ropa = [
     color: "hanSolo",
     stock: 10,
     precio: 1200,
-    imagen:
-      "http://d3ugyf2ht6aenh.cloudfront.net/stores/064/882/products/remera_certified_estampados_mockup111-d50eb0a855384adf6915943214374931-640-0.jpg",
+    imagen: "http://d3ugyf2ht6aenh.cloudfront.net/stores/064/882/products/remera_certified_estampados_mockup111-d50eb0a855384adf6915943214374931-640-0.jpg",
   },
   {
     id: 5,
@@ -51,8 +47,7 @@ const ropa = [
     color: "r2d2",
     stock: 10,
     precio: 1500,
-    imagen:
-      "https://mimilandtiendafriki.com.ar/wp-content/uploads/2021/02/adrogue-star-wars-mimi-land-adrogue-babyjoda.jpg",
+    imagen: "https://mimilandtiendafriki.com.ar/wp-content/uploads/2021/02/adrogue-star-wars-mimi-land-adrogue-babyjoda.jpg",
   },
   {
     id: 7,
@@ -60,8 +55,7 @@ const ropa = [
     color: "stormtrooper",
     stock: 10,
     precio: 1500,
-    imagen:
-      "https://d3ugyf2ht6aenh.cloudfront.net/stores/122/451/products/star-2-1cc90b2909ca2378a815572586666975-1024-1024.jpg",
+    imagen: "https://d3ugyf2ht6aenh.cloudfront.net/stores/122/451/products/star-2-1cc90b2909ca2378a815572586666975-1024-1024.jpg",
   },
 
   {
@@ -79,8 +73,7 @@ const ropa = [
     color: "gris",
     stock: 10,
     precio: 2000,
-    imagen:
-      "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/030/513/products/whatsapp-image-2021-06-05-at-13-24-581-4b728d2290700597d416229104909444-640-0.jpeg",
+    imagen: "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/030/513/products/whatsapp-image-2021-06-05-at-13-24-581-4b728d2290700597d416229104909444-640-0.jpeg",
   },
 
   {
@@ -89,8 +82,7 @@ const ropa = [
     color: "negro",
     stock: 10,
     precio: 2000,
-    imagen:
-      "http://d3ugyf2ht6aenh.cloudfront.net/stores/029/842/products/cr-negro-millennium-falcon1-a9c21888b35407d57f16254979432091-640-0.png",
+    imagen: "http://d3ugyf2ht6aenh.cloudfront.net/stores/029/842/products/cr-negro-millennium-falcon1-a9c21888b35407d57f16254979432091-640-0.png",
   },
 ];
 
@@ -228,6 +220,8 @@ const peliculas = [
     precio: 500,
     stock: 5,
     imagen: "https://i.pinimg.com/originals/4c/20/97/4c2097d9d58382a829645e39f348bf38.jpg",
+    descripcion:
+      "La trama describe la historia del maestro jedi Qui-Gon Jinn y de su aprendiz Obi-Wan Kenobi, que escoltan y protegen a la Reina Amidala desde su planeta Naboo hasta Coruscant con la esperanza de encontrar una salida pacífica a un conflicto comercial interplanetario a gran escala.",
   },
   {
     id: 2,
@@ -255,8 +249,7 @@ const peliculas = [
     name: "Episodio V: El Imperio Contrataca",
     precio: 500,
     stock: 5,
-    imagen:
-      "https://www.planetadelibros.com/usuaris/libros/fotos/201/m_libros/portada_star-wars-episodio-v-el-imperio-contraataca_archie-goodwin_202007201222.jpg",
+    imagen: "https://www.planetadelibros.com/usuaris/libros/fotos/201/m_libros/portada_star-wars-episodio-v-el-imperio-contraataca_archie-goodwin_202007201222.jpg",
   },
   {
     id: 6,
@@ -284,8 +277,7 @@ const peliculas = [
     name: "Episodio IX: El Ascenso de Skywalker",
     precio: 500,
     stock: 5,
-    imagen:
-      "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/rise-of-skywalker-poster-d23-1566678674.jpg?resize=480:*",
+    imagen: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/rise-of-skywalker-poster-d23-1566678674.jpg?resize=480:*",
   },
   {
     id: 10,
@@ -305,7 +297,7 @@ const peliculas = [
 
 const traerProductos = new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve();
+    resolve(peliculas);
   }, 3500);
 });
 

@@ -27,7 +27,7 @@ function ItemListContainer() {
         <img className="halcon" src={require("../imagenes/pagina/halcon.png")} alt="ERROR"></img>
       ) : (
         <section>
-          <ItemList />
+          <ItemList peliculas={productos} />
         </section>
       )}
     </>

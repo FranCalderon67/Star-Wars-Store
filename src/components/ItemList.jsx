@@ -1,7 +1,7 @@
 import React from "react";
-import { ItemPeliculas, ItemRopa } from "./Item.jsx";
-
-function ItemList() {
+// import { ItemPeliculas, ItemRopa } from "./Item.jsx";
+import Item from "./Item";
+function ItemList({ peliculas }) {
   return (
     <>
       <h1
@@ -15,9 +15,12 @@ function ItemList() {
         Películas
       </h1>
       <div className="flexContainer">
-        <ItemPeliculas />
+        {peliculas &&
+          peliculas.map((p) => {
+            return <Item item={p} />;
+          })}
       </div>
-      <h1
+      {/* <h1
         style={{
           color: "white",
           font: "70",
@@ -29,7 +32,7 @@ function ItemList() {
       </h1>
       <div className="flexContainer">
         <ItemRopa />
-      </div>
+      </div> */}
     </>
   );
 }
