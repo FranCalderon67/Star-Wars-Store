@@ -12,7 +12,7 @@ const Item = ({ item }) => {
         <div className="card-body">
           <h5 className="card-title cardPelicula">{item.name}</h5>
           <div className="card-text">
-            <ItemCount stock={item.stock} initial={1} />
+            <ItemCount stock={item.stock} initial={0} />
           </div>
           <p className="cardPelicula">$ {item.precio}</p>
           <button className="btn btn-primary">Agregar al Carrito</button>
