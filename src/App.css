@@ -106,6 +106,59 @@
   }
 }
 
+.flexDetail {
+  margin: 1rem 0 0 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.titulosDetail {
+  color: #ffffff;
+  font-family: "IM Fell Double Pica", serif;
+  font-size: 25px;
+  text-align: center;
+  margin: 1rem 0 2rem 1rem;
+}
+
+.itemDetail {
+  font-family: "Hahmlet", serif;
+  font-weight: 700;
+  font-size: 15px;
+  margin: 2rem 2rem 2rem 2rem;
+  color: #ffffff;
+}
+
+.portadaDetail {
+  height: 500px;
+  width: 400px;
+}
+.btnFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.btnDetail {
+  margin: 3rem 3rem 0 0;
+}
+
+.sable {
+  position: fixed;
+  z-index: 1;
+  width: 350px;
+  animation-name: giro;
+  animation-duration: 2s;
+  opacity: 1;
+  z-index: 1;
+}
+
+@keyframes giro {
+  0% {
+    z-index: 1;
+    opacity: 1;
+    transform: rotateZ(-360deg);
+  }
+}
+
 @media (max-width: 768px) {
   .nav-link {
     border-left: unset;
@@ -114,19 +167,4 @@
   .navFlex {
     justify-content: flex-start;
   }
-}
-
-.itemDetail {
-  font-family: "Hahmlet", serif;
-  font-weight: 700;
-  font-size: 15px;
-  margin: 0 2rem 1rem 2rem;
-}
-
-.portadaDetail {
-  height: 500px;
-  width: 400px;
-}
-.modal {
-  text-align: center;
 }

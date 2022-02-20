@@ -5,33 +5,33 @@ function ItemList({ ropa, figura, sable, nave, peliculas }) {
     <>
       <div className="flexContainer">
         {ropa &&
-          ropa.map((p) => {
-            return <Item item={p} />;
+          ropa.map((r) => {
+            return <Item item={r} />;
           })}
       </div>
       <div className="flexContainer">
         {figura &&
-          figura.map((p) => {
-            return <Item item={p} />;
+          figura.map((f) => {
+            return <Item item={f} />;
           })}
       </div>
       <div className="flexContainer">
         {sable &&
-          sable.map((p) => {
-            return <Item item={p} />;
+          sable.map((s) => {
+            return <Item item={s} />;
           })}
       </div>
       <div className="flexContainer">
         {nave &&
-          nave.map((p) => {
-            return <Item item={p} />;
+          nave.map((n) => {
+            return <Item item={n} />;
           })}
       </div>
 
       <div className="flexContainer">
         {peliculas &&
           peliculas.map((p) => {
-            return <Item item={p} />;
+            return <Item item={p} id={p.id} />;
           })}
       </div>
     </>
