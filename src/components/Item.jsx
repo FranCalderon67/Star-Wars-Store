@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../App.css";
 import ItemCount from "./ItemCount";
 
@@ -18,10 +19,9 @@ const Item = ({ item }) => {
           <button className="btn btn-primary">Agregar al Carrito</button>
         </div>
 
-        {/* Button trigger modal */}
-        <button type="button" className="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <Link to={`/productos/${item.id}`} type="button" className="btn btn-success">
           Más Información
-        </button>
+        </Link>
       </div>
     </>
   );

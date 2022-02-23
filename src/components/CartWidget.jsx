@@ -11,6 +11,7 @@ const CartWidget = () => {
             height: "40",
           }}
         />
+        <span style={{ color: "white" }}>4</span>
       </a>
     </li>
   );
