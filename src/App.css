@@ -156,7 +156,7 @@
   0% {
     z-index: 1;
     opacity: 1;
-    transform: rotateZ(-360deg);
+    transform: rotateZ(-1800deg);
   }
 }
 
