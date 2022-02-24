@@ -63,7 +63,7 @@ const productos = [
     type: "jedi",
     stock: 10,
     precio: 1800,
-    imagen: "https://m.media-amazon.com/images/I/61DqTM75frS._AC_SL1500_.jpg",
+    imagen: "https://collectoys.es/8707-large_default/figura-obi-wan-kenobi-artfx-star-wars-kotobukiya.jpghttps://m.media-amazon.com/images/I/61DqTM75frS._AC_SL1500_.jpg",
     descripcion:
       "Obi-Wan se ve obligado a luchar contra su amigo Anakin Skywalker en un devastador duelo de sable láser después de que Anakin se vuelva al lado oscuro. Esta figura de acción de Star Wars The Black Series viene con un accesorio desmontable inspirado en el entretenimiento que es una gran adición a cualquier colección de Star Wars",
   },
