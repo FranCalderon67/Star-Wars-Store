@@ -4,12 +4,12 @@ import { useParams } from "react-router-dom";
 import { productos } from "./productos";
 import "../App.css";
 
-const getItem = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve(productos);
-  }, 2000);
-});
-
+const getItem = () =>
+  new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(productos);
+    }, 2000);
+  });
 function ItemDetailContainer() {
   const [producto, setProducto] = useState();
   const [cargando, setCargando] = useState(false);
@@ -17,19 +17,13 @@ function ItemDetailContainer() {
   useEffect(() => {
     try {
       if (id) {
-        getItem.then((res) => {
-          let [resultado] = res.filter((elemento) => {
-            let mostrarDetalle;
-            if (id == elemento.id) {
-              mostrarDetalle = elemento;
-            }
-
-            return mostrarDetalle;
-          });
-          console.log(resultado);
+        async function fetchData() {
+          const todosLosProductos = await getItem();
+          const [resultado] = todosLosProductos.filter((elemento) => (id == elemento.id ? elemento : false));
           setProducto(resultado);
           setCargando(true);
-        });
+        }
+        fetchData();
       }
     } catch (error) {
       console.log(error);

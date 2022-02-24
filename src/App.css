@@ -142,13 +142,14 @@
 }
 
 .sable {
-  position: fixed;
+  position: relative;
   z-index: 1;
   width: 350px;
   animation-name: giro;
   animation-duration: 2s;
   opacity: 1;
   z-index: 1;
+  margin: 1rem 0 0 33%;
 }
 
 @keyframes giro {
