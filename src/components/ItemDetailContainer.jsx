@@ -26,6 +26,7 @@ function ItemDetailContainer() {
 
             return mostrarDetalle;
           });
+          console.log(resultado);
           setProducto(resultado);
           setCargando(true);
         });

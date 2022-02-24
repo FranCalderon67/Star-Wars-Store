@@ -25,15 +25,17 @@ function ItemListContainer() {
           setProductos(resultado);
           setCargando(false);
         });
+      } else {
+        traerProductos.then((res) => {
+          setProductos(res);
+          setCargando(false);
+        });
       }
     } catch (error) {
       console.log(error);
     }
   }, [categoria]);
-  // traerProductos.then((res) => {
-  //   setProductos(res);
-  //   setCargando(false);
-  // });
+
   return (
     <>
       {cargando ? (
