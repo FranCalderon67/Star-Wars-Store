@@ -35,21 +35,21 @@ function NavBar() {
                 <li className="nav-item">
                   <div className="dropdown">
                     <button className="btn btn-dark dropdown-toggle nav-color nav-link" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                      Figuras
+                      Figuras y Sables
                     </button>
                     <ul className="dropdown-menu dropdown-menu-dark">
                       <li>
-                        <Link to="./productos/categoria/figura/jedi" className="dropdown-item">
+                        <Link to="./productos/categoria/jedi" className="dropdown-item">
                           Jedi
                         </Link>
                       </li>
                       <li>
-                        <Link to="./productos/categoria/figura/sith" className="dropdown-item">
+                        <Link to="./productos/categoria/sith" className="dropdown-item">
                           Lord Sith
                         </Link>
                       </li>
                       <li>
-                        <Link to="./productos/categoria/figura/legendario" className="dropdown-item">
+                        <Link to="./productos/categoria/legendario" className="dropdown-item">
                           Personajes Legendarios
                         </Link>
                       </li>
@@ -64,37 +64,19 @@ function NavBar() {
 
                     <ul className="dropdown-menu dropdown-menu-dark">
                       <li>
-                        <Link to="./productos/categoria/ropa/remera" className="dropdown-item">
+                        <Link to="./productos/categoria/remera" className="dropdown-item">
                           Remeras
                         </Link>
                       </li>
                       <li>
-                        <Link to="./productos/categoria/ropa/buzo" className="dropdown-item">
+                        <Link to="./productos/categoria/buzo" className="dropdown-item">
                           Buzos
                         </Link>
                       </li>
                     </ul>
                   </div>
                 </li>
-                <li className="nav-item">
-                  <div className="dropdown">
-                    <button className="btn btn-dark dropdown-toggle nav-color nav-link" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                      Sables
-                    </button>
-                    <ul className="dropdown-menu dropdown-menu-dark">
-                      <li>
-                        <Link to="./productos/categoria/sable/jedi" className="dropdown-item">
-                          Jedi
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="./productos/categoria/sable/sith" className="dropdown-item">
-                          Lord Sith
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
+
                 <CartWidget />
               </ul>
             </div>

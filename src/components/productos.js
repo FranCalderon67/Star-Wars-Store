@@ -1,9 +1,9 @@
 const productos = [
   {
-    categoria: "figura",
+    categoria: "legendario",
     id: 1,
     name: "Chewbacca",
-    type: "legendario",
+
     stock: 10,
     precio: 1500,
     imagen: "https://freakworldcanarias.com/2937-large_default/figura-chewbacca-star-wars-.jpg",
@@ -12,10 +12,10 @@ const productos = [
   },
 
   {
-    categoria: "figura",
+    categoria: "sith",
     id: 2,
     name: "Darth Maul",
-    type: "sith",
+
     stock: 10,
     precio: 1500,
     imagen: "https://www.hasbro.com/common/productimages/es_MX/301C5F9269814B66A2AF59DE95AC6603/16B6E73ED77E42219692B666A0492507.jpg",
@@ -24,10 +24,10 @@ const productos = [
   },
 
   {
-    categoria: "figura",
+    categoria: "sith",
     id: 3,
     name: "Darth Vader",
-    type: "sith",
+
     stock: 10,
     precio: 1800,
     imagen: "https://static.fnac-static.com/multimedia/Images/ES/NR/13/26/15/1386003/1540-1/tsp20170828132243/Figura-Star-Wars-Episodio-IV-Darth-Vader-19-5cm.jpg",
@@ -35,10 +35,10 @@ const productos = [
       "DARTH VADER: Después de la destrucción de la Estrella de la Muerte, Darth Vader se obsesionó con encontrar a Luke Skywalker, finalmente localizando la base rebelde en el planeta de hielo remoto Hoth. Articulación y detalles de alta calidad: los fans y coleccionistas de Star Wars pueden mostrar esta figura altamente articulada (4 extremidades totalmente articuladas), con decoración premium, en su figura de acción y colección de vehículos",
   },
   {
-    categoria: "figura",
+    categoria: "legendario",
     id: 4,
     name: "Leia",
-    type: "legendario",
+
     stock: 10,
     precio: 1500,
     imagen: "https://www.crazyproders.com/4708-thickbox_default/sideshow-star-wars-princesse-leia-premium-format.jpg",
@@ -46,10 +46,10 @@ const productos = [
       "Organa Princesa Leia: la princesa Leia Organa fue uno de los mejores líderes de la Alianza Rebelde, sin miedo en el campo de batalla y dedicada a acabar con la tiranía del Imperio. Accesorios inspirados en personajes de película: esta figura de acción de Star Wars The Black Series viene con 2 accesorios desmontables inspirados en el entretenimiento que son grandes adiciones a cualquier colección de Star Wars",
   },
   {
-    categoria: "figura",
+    categoria: "jedi",
     id: 5,
     name: "Luke Skywalker",
-    type: "jedi",
+
     stock: 10,
     precio: 1800,
     imagen: "https://collectoys.es/10032-large_default/figura-luke-skywalker-return-of-the-jedi-artfx-kotobukiya.jpg",
@@ -57,10 +57,10 @@ const productos = [
       "Luke Skywalker es un poderoso caballero Jedi que utiliza la Fuerza contra el mal Imperio. Figura de acción posable: cada figura de acción de Star Wars de 9.5 pulgadas cuenta con 4 puntos de articulación – cabeza, brazos y cintura – para que los niños y niñas y más grandes puedan posar sus figuras para cualquier aventura que imaginen",
   },
   {
-    categoria: "figura",
+    categoria: "jedi",
     id: 6,
     name: "Obi-Wan Kenobi",
-    type: "jedi",
+
     stock: 10,
     precio: 1800,
     imagen: "https://collectoys.es/8707-large_default/figura-obi-wan-kenobi-artfx-star-wars-kotobukiya.jpghttps://m.media-amazon.com/images/I/61DqTM75frS._AC_SL1500_.jpg",
@@ -69,10 +69,10 @@ const productos = [
   },
 
   {
-    categoria: "figura",
+    categoria: "jedi",
     id: 7,
     name: "Yoda",
-    type: "jedi",
+
     stock: 10,
     precio: 1800,
     imagen: "https://images-eu.ssl-images-amazon.com/images/I/416SY70vDfL._SS300_.jpg",
@@ -80,10 +80,10 @@ const productos = [
       "Figura de Yoda a escala de 6 pulgadas con diseño inspirado en la película: Yoda era un legendario maestro Jedi y más fuerte que la mayoría en su conexión con la fuerza. Imagina el pequeño pero potente maestro Jedi entrenando Luke Skywalker con esta figura de Yoda de 6 pulgadas, inspirada en la película Star Wars: el imperio contraataca, parte de la franquicia de la película Star Wars que incluye Star Wars: el último Jedi y solo: una historia de Star Wars. La galaxia de Star Wars incluye personajes queridos y temidos como Luke Skywalker, Han solo, Princesa Leia organa, Chewbacca y Darth Vader, así como Stormtroopers, Droids, y mucho más.",
   },
   {
-    categoria: "sable",
+    categoria: "sith",
     id: 8,
     name: "Sable de Darth Maul",
-    type: "sith",
+
     stock: 10,
     precio: 500,
     imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXs2aZTc1vLSNXr54KdJ_S9Jj5yTQ9Nymh_aLG6v5nZa1YTDnnbcTThp6x42K-bYqccZA&usqp=CAU",
@@ -92,10 +92,10 @@ const productos = [
   },
 
   {
-    categoria: "sable",
+    categoria: "sith",
     id: 9,
     name: "Sable de Darth Vader",
-    type: "sith",
+
     stock: 10,
     precio: 500,
     imagen: "https://m.media-amazon.com/images/I/61cBFzr9imL._AC_SX425_.jpg",
@@ -103,10 +103,10 @@ const productos = [
       "Sable de luz electrónico Darth Vader iluminado. Cuenta con luces, sonidos y frases del Señor Seth, Darth Vader. Entrena en los caminos de la fuerza: pulsa el botón para escuchar frases de Darth Vader y comienza a entrenar el sable de luz en el camino hacia el lado oscuro",
   },
   {
-    categoria: "sable",
+    categoria: "sith",
     id: 10,
     name: "Sable de Kylo Ren",
-    type: "sith",
+
     stock: 10,
     precio: 500,
     imagen: "https://simaro.co/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/S/t/Star-Wars-Kylo-Ren-Electrnica-Rojo-Sable-de-luz-de-Juguete-para-nios-de-6-y-Hasta-.jpeg",
@@ -115,10 +115,10 @@ const productos = [
   },
 
   {
-    categoria: "sable",
+    categoria: "jedi",
     id: 11,
     name: "Sable de Mace Windu",
-    type: "jedi",
+
     stock: 10,
     precio: 500,
     imagen: "https://www.aceroymagia.com/Images/articulo/sable-de-luz-mace-windu-starwars/01-sable-de-luz-mace-windu-starwars.jpg",
@@ -126,10 +126,10 @@ const productos = [
       "Crea el suyo: el juguete de sable láser Forge Mace Windu está compuesto de cuatro partes: la hoja, la tapa, la cubierta y el núcleo, lo que permite a los niños montar su sable de luz para duelos imaginarios. Encendedor personalizable: las piezas son compatibles en toda la línea de forja de sable de luz para que los niños puedan mezclar y combinar. La compra de un solo sable de luz adicional desbloquea 16 combinaciones totale",
   },
   {
-    categoria: "sable",
+    categoria: "jedi",
     id: 12,
     name: "Sable de Obi-Wan Kenobi",
-    type: "jedi",
+
     stock: 10,
     precio: 500,
     imagen: "https://m.media-amazon.com/images/I/71FfhinHHcL._AC_SX425_.jpg",
@@ -137,10 +137,10 @@ const productos = [
       "Crea suyos: el juguete de sable láser Forge Obi-Wan Kenobi está compuesto por cuatro partes: la cuchilla, la tapa, la cubierta y el núcleo, lo que permite a los niños montar su sable de luz para duelos imaginarios. Lámpara personalizable: las piezas son compatibles en toda la línea de espada de luz Forge para que los niños puedan mezclar y combinar. La compra de un solo sable láser adicional desbloquea 16 combinaciones totales.",
   },
   {
-    categoria: "sable",
+    categoria: "jedi",
     id: 13,
     name: "Sable de Yoda",
-    type: "jedi",
+
     stock: 10,
     precio: 500,
     imagen: "https://m.media-amazon.com/images/I/51atZw6asqL._AC_SL1000_.jpg",
@@ -148,118 +148,118 @@ const productos = [
       "El sable láser tiene un sonido Blaster y flash en choque, soporta el duelo. Mango suave y hoja extraíble: el mango está hecho de aleación de aluminio. El material de la hoja es de policarbonato de alta calidad. La hoja necesita una longitud total de unos 37.4 in después del montaje.Sonido de película FX: cuando el sable está apagado, pulsa durante mucho tiempo para cambiar las fuentes de sonido. El sable tiene una fuente de sonido más silencioso. Soporta duelo pesado.",
   },
   {
-    categoria: "ropa",
+    categoria: "remera",
     id: 14,
     name: "Remera Blanca",
     color: "blanco",
     stock: 10,
     precio: 1000,
-    type: "remera",
+
     imagen: "https://ideasmvd.com.uy/wp-content/uploads/2020/12/star-wars-remera-blanca-ideas-mvd.jpg",
     descripcion: "50 % poliéster , 50 % algodón. Lavable a máquina",
   },
 
   {
-    categoria: "ropa",
+    categoria: "remera",
     id: 15,
     name: "Remera Gris",
     color: "gris",
     stock: 10,
     precio: 1000,
-    type: "remera",
+
     imagen: "https://d3ugyf2ht6aenh.cloudfront.net/stores/342/641/products/star-wars01-gris-melange1-116516acf69e71d87816235626139862-1024-1024.png",
     descripcion: "50 % poliéster , 50 % algodón. Lavable a máquina",
   },
 
   {
-    categoria: "ropa",
+    categoria: "remera",
     id: 16,
     name: "Remera Negra",
     color: "negro",
     stock: 10,
     precio: 1000,
-    type: "remera",
+
     imagen: "https://tap-multimedia-1172.nyc3.digitaloceanspaces.com/productimage/19786/3720000000231.jpg",
     descripcion: "50 % poliéster , 50 % algodón. Lavable a máquina",
   },
   {
-    categoria: "ropa",
+    categoria: "remera",
     id: 17,
     name: "Remera Han Solo",
     color: "hanSolo",
     stock: 10,
     precio: 1200,
-    type: "remera",
+
     imagen: "http://d3ugyf2ht6aenh.cloudfront.net/stores/064/882/products/remera_certified_estampados_mockup111-d50eb0a855384adf6915943214374931-640-0.jpg",
     descripcion: "50 % poliéster , 50 % algodón. Lavable a máquina",
   },
   {
-    categoria: "ropa",
+    categoria: "remera",
     id: 18,
     name: "Remera BB8",
     color: "bb8",
     stock: 10,
     precio: 1200,
-    type: "remera",
+
     imagen: "https://http2.mlstatic.com/D_964357-MLA48467103044_122021-O.jpg",
     descripcion: "50 % poliéster , 50 % algodón. Lavable a máquina",
   },
   {
-    categoria: "ropa",
+    categoria: "remera",
     id: 19,
     name: "Remera R2D2",
     color: "r2d2",
     stock: 10,
     precio: 1500,
-    type: "remera",
+
     imagen: "https://mimilandtiendafriki.com.ar/wp-content/uploads/2021/02/adrogue-star-wars-mimi-land-adrogue-babyjoda.jpg",
     descripcion: "50 % poliéster , 50 % algodón. Lavable a máquina",
   },
   {
-    categoria: "ropa",
+    categoria: "remera",
     id: 20,
     name: "Remera Stormtrooper",
     color: "stormtrooper",
     stock: 10,
     precio: 1500,
-    type: "remera",
+
     imagen: "https://d3ugyf2ht6aenh.cloudfront.net/stores/122/451/products/star-2-1cc90b2909ca2378a815572586666975-1024-1024.jpg",
     descripcion: "50 % poliéster , 50 % algodón. Lavable a máquina",
   },
 
   {
-    categoria: "ropa",
+    categoria: "buzo",
     id: 21,
     name: "Buzo Blanco",
     color: "blanco",
     stock: 10,
     precio: 2000,
-    type: "buzo",
+
     imagen: "https://http2.mlstatic.com/D_975726-MLA46468011063_062021-O.jpg",
     descripcion:
       "60 % Algodón, 40 % Poliéster. Esta sudadera clásica con capucha para uso diario cuenta con mangas largas, un bolsillo canguro, un dobladillo y puños acanalados anchos para bloquear el calor",
   },
 
   {
-    categoria: "ropa",
+    categoria: "buzo",
     id: 22,
     name: "Buzo Gris",
     color: "gris",
     stock: 10,
     precio: 2000,
-    type: "buzo",
+
     imagen: "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/030/513/products/whatsapp-image-2021-06-05-at-13-24-581-4b728d2290700597d416229104909444-640-0.jpeg",
     descripcion: "60 % Algodón, 40 % Poliéster. Lavar a máquina",
   },
 
   {
-    categoria: "ropa",
+    categoria: "buzo",
     id: 23,
     name: "Buzo Negro",
     color: "negro",
     stock: 10,
     precio: 2000,
-    type: "buzo",
+
     imagen: "http://d3ugyf2ht6aenh.cloudfront.net/stores/029/842/products/cr-negro-millennium-falcon1-a9c21888b35407d57f16254979432091-640-0.png",
     descripcion: "60 % Algodón, 40 % Poliéster. Lavar a máquina",
   },

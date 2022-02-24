@@ -18,7 +18,7 @@ function ItemDetailContainer() {
     try {
       if (id) {
         getItem.then((res) => {
-          let resultado = res.filter((elemento) => {
+          let [resultado] = res.filter((elemento) => {
             let mostrarDetalle;
             if (id == elemento.id) {
               mostrarDetalle = elemento;
@@ -36,7 +36,7 @@ function ItemDetailContainer() {
     }
   }, [id]);
 
-  return <>{cargando ? <ItemDetail item={producto[0]} /> : <img className="sable" src={require("../imagenes/pagina/sable.png")} alt="ERROR"></img>}</>;
+  return <>{cargando ? <ItemDetail item={producto} /> : <img className="sable" src={require("../imagenes/pagina/sable.png")} alt="ERROR"></img>}</>;
 }
 
 export default ItemDetailContainer;
