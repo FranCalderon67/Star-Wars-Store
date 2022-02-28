@@ -1,4 +1,3 @@
-import React from "react";
 import "../App.css";
 import ItemCount from "./ItemCount";
 
@@ -15,10 +14,6 @@ function ItemDetail({ item }) {
           <p className="itemDetail">$ {item.precio}</p>
           <p className="itemDetail">{item.descripcion}</p>
           <ItemCount stock={item.stock} initial={0} />
-          <div className="btnFlex">
-            <button className="btn btn-primary btnDetail">Agregar al Carrito</button>
-            <button className="btn btn-success btnDetail">Volver</button>
-          </div>
         </div>
       </div>
     </>
