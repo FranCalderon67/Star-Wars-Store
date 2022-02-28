@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import "../App.css";
 import ItemCount from "./ItemCount";
 
+const terminarCompra = () => {
+  return <button>Terminar Compra</button>;
+};
+
 const Item = ({ item }) => {
   return (
     <>
@@ -16,7 +20,9 @@ const Item = ({ item }) => {
             <ItemCount stock={item.stock} initial={0} />
           </div>
           <p className="cardPelicula">$ {item.precio}</p>
-          <button className="btn btn-primary">Agregar al Carrito</button>
+          <button className="btn btn-primary" onClick={terminarCompra}>
+            Agregar al Carrito
+          </button>
         </div>
 
         <Link to={`/productos/${item.id}`} type="button" className="btn btn-success">

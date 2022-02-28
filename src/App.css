@@ -130,7 +130,7 @@
 
 .portadaDetail {
   height: 500px;
-  width: 400px;
+  width: 500px;
 }
 .btnFlex {
   display: flex;
@@ -167,5 +167,29 @@
   }
   .navFlex {
     justify-content: flex-start;
+  }
+  .portadaDetail {
+    height: 320px;
+    width: 320px;
+  }
+  .itemDetail {
+    font-family: "Hahmlet", serif;
+    font-weight: 700;
+    font-size: 12px;
+    margin: 1rem 1rem 1rem 1rem;
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 425px) {
+  .flexDetail {
+    margin: 1rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sable {
+    width: 200px;
+    margin: 1rem 0 0 4rem;
   }
 }
