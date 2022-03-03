@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import { productos } from "./productos";
+
 import "../App.css";
 
 const getItem = () =>
@@ -11,9 +12,10 @@ const getItem = () =>
     }, 2000);
   });
 function ItemDetailContainer() {
-  const [producto, setProducto] = useState();
+  const [producto, setProducto] = useState([]);
   const [cargando, setCargando] = useState(false);
   const { id } = useParams();
+
   useEffect(() => {
     try {
       if (id) {

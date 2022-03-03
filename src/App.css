@@ -141,6 +141,10 @@
   margin: 3rem 3rem 0 0;
 }
 
+.btnDetail_terminar_compra {
+  margin: 3rem 2rem 0 16rem;
+}
+
 .sable {
   position: relative;
   z-index: 1;
@@ -158,6 +162,34 @@
     opacity: 1;
     transform: rotateZ(-1800deg);
   }
+}
+
+.flexCarrito {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem 0 0 2rem;
+  align-items: center;
+}
+
+.imgCarrito {
+  height: 320px;
+  width: 250px;
+}
+
+.descripcionCarrito {
+  color: #ffffff;
+  font-family: "IM Fell Double Pica", serif;
+  font-size: 20px;
+  text-align: center;
+  margin: 0 0 0 2rem;
+}
+
+.btnCarrito {
+  margin: 0 0 0 2rem;
+}
+
+.btnVaciarCarrito {
+  margin: 2rem 0 1rem 33%;
 }
 
 @media (max-width: 768px) {

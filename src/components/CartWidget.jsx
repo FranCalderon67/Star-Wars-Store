@@ -1,19 +1,20 @@
 import React from "react";
 import { BiCart } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
-const CartWidget = () => {
+const CartWidget = ({ cantidad }) => {
   return (
     <>
       <li className="  nav-item">
-        <a className="nav-link active nav-color" aria-current="page" href="#">
+        <Link to="/carrito" className="nav-link active nav-color" aria-current="page" href="#">
           <BiCart
             style={{
               width: "65",
               height: "40",
             }}
           />
-          <span style={{ color: "white" }}>4</span>
-        </a>
+          <span>{cantidad}</span>
+        </Link>
       </li>
     </>
   );

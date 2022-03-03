@@ -13,7 +13,6 @@ const Item = ({ item }) => {
           <h5 className="card-title cardPelicula">{item.name}</h5>
 
           <p className="cardPelicula">$ {item.precio}</p>
-          <button className="btn btn-primary">Agregar al Carrito</button>
         </div>
 
         <Link to={`/productos/${item.id}`} type="button" className="btn btn-success">

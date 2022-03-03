@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../App.css";
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
+import { CartContext } from "./CartContext";
 
 function NavBar() {
+  const { cartCount } = useContext(CartContext);
   return (
     <>
       <div className="navFlex">
@@ -77,7 +79,7 @@ function NavBar() {
                   </div>
                 </li>
                 <Link to="/carrito">
-                  <CartWidget />
+                  <CartWidget cantidad={cartCount} />
                 </Link>
               </ul>
             </div>
