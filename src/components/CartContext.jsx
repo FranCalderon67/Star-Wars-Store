@@ -21,14 +21,17 @@ function CartProvider({ children }) {
     }
   };
 
-  // const eliminarItem = (item) => cartItems.filter((producto) => producto.id !== item.id);
-  const vaciarCarrito = (item) => {
-    console.log(cartItems);
-    cartItems.splice((producto) => producto.id !== item.id);
+  // const vaciarCarrito = (item) => {
+  //   cartItems.splice((producto) => producto.id !== item.id);
+  //   setCartCount(0);
+  // };
+
+  const vaciarCarrito = () => {
+    setCartItems([]);
     setCartCount(0);
   };
 
-  const eliminarItem = () => {};
+  const eliminarItem = (item) => {};
 
   return <CartContext.Provider value={{ cartItems, cartCount, addItem, eliminarItem, vaciarCarrito }}>{children}</CartContext.Provider>;
 }
