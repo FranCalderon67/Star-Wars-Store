@@ -1,29 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 
-function ItemCount({ stock, initial }) {
-  const [contador, setContador] = useState(initial);
-
-  const incrementar = () => {
-    if (contador < stock) {
-      setContador(contador + 1);
-    }
-  };
-
-  const restar = () => {
-    if (contador > 0) {
-      setContador(contador - 1);
-    }
-  };
-
+function ItemCount({ clickMenos, count, clickMas }) {
   return (
     <>
       <div className="contador">
-        <button type="button" className="btn btn-dark" onClick={restar}>
+        <button type="button" className="btn btn-dark" onClick={clickMenos}>
           -
         </button>
 
-        <p style={{ color: "white" }}>{contador}</p>
-        <button type="button" className="btn btn-dark" onClick={incrementar}>
+        <p style={{ color: "white" }}>{count}</p>
+        <button type="button" className="btn btn-dark" onClick={clickMas}>
           +
         </button>
       </div>
@@ -31,4 +17,4 @@ function ItemCount({ stock, initial }) {
   );
 }
 
-export { ItemCount };
+export default ItemCount;
