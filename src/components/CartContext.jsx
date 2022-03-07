@@ -7,20 +7,6 @@ function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState([]);
   const [cartCount, setCartCount] = useState(0);
 
-  // const addItem = (item, quantity) => {
-  //   if (isInCart(item.id)) {
-  //     const newCart = [...cartItems];
-  //     for (const it of newCart) {
-  //       if (it.item.id == item.id) {
-  //         it.quantity = it.quantity + quantity;
-  //       }
-  //     }
-  //     setCartItems(newCart);
-  //   } else {
-  //     setCartItems([...cartItems, { item: item, quantity: quantity }]);
-  //   }
-  // };
-
   const addItem = (item, cantidad) => {
     if (cartItems.some((producto) => producto.id == item.id)) {
       const copy = [...cartItems];
@@ -35,22 +21,36 @@ function CartProvider({ children }) {
     }
   };
 
+  const precioTotal = () => {
+    return (
+      <>
+        <p>{}</p>
+      </>
+    );
+  };
+
   const vaciarCarrito = () => {
     setCartItems([]);
     setCartCount(0);
   };
-  // const isInCart = (id) => {
-  //   return cartItems.find((e) => e.item.id === id);
-  // };
 
-  const eliminarItem = (id) => {
-    const nuevoCarrito = [...cartItems].map((item) => item.id !== id);
-    setCartItems(nuevoCarrito);
-    // setCartCount((prev) => prev - );
-    console.log(nuevoCarrito);
+  const eliminarItem = (id, cantidad) => {
+    const carritoNuevo = cartItems.filter((e) => e.id !== id);
+    setCartItems(carritoNuevo);
+    const nuevaCantidad = cartItems.filter((c) => c.cantidad !== cantidad);
+
+    if (nuevaCantidad == 0) {
+      setCartCount(() => cantidad - cartCount);
+    } else {
+      setCartCount(() => cantidad - nuevaCantidad);
+    }
+
+    if (cantidad == cartCount) {
+      console.log("Cantidad es igual CartCount");
+    }
   };
 
-  return <CartContext.Provider value={{ cartItems, cartCount, addItem, eliminarItem, vaciarCarrito }}>{children}</CartContext.Provider>;
+  return <CartContext.Provider value={{ cartItems, cartCount, addItem, eliminarItem, vaciarCarrito, precioTotal }}>{children}</CartContext.Provider>;
 }
 
 export { CartContext };

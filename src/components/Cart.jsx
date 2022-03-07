@@ -5,8 +5,11 @@ import { Link } from "react-router-dom";
 
 function Cart() {
   const { cartItems } = useCartContext();
+  console.log("Item en Carrito=>", cartItems);
   const { eliminarItem } = useCartContext();
   const { vaciarCarrito } = useCartContext();
+  const { precioTotal } = useCartContext();
+
   return (
     <>
       {cartItems.length === 0 ? (
@@ -25,14 +28,16 @@ function Cart() {
                 <p className="descripcionCarrito">
                   {i.name} x {i.cantidad} Total = $ {i.precio * i.cantidad}
                 </p>
-                <button className="btn btn-warning btnCarrito" onClick={eliminarItem}>
+                <button className="btn btn-warning btnCarrito" onClick={() => eliminarItem(i.id, i.cantidad)}>
                   <TiTrash style={{ width: "35", height: "35" }} />
                 </button>
               </div>
+              <p>{precioTotal(cartItems)}</p>
             </>
           );
         })
       )}
+
       {cartItems.length === 0 ? (
         ""
       ) : (
