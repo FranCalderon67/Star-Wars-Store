@@ -21,36 +21,22 @@ function CartProvider({ children }) {
     }
   };
 
-  const precioTotal = () => {
-    return (
-      <>
-        <p>{}</p>
-      </>
-    );
-  };
-
   const vaciarCarrito = () => {
     setCartItems([]);
     setCartCount(0);
   };
 
-  const eliminarItem = (id, cantidad) => {
+  const eliminarItem = (id, count) => {
     const carritoNuevo = cartItems.filter((e) => e.id !== id);
+    setCartCount(cartCount - count);
     setCartItems(carritoNuevo);
-    const nuevaCantidad = cartItems.filter((c) => c.cantidad !== cantidad);
-
-    if (nuevaCantidad == 0) {
-      setCartCount(() => cantidad - cartCount);
-    } else {
-      setCartCount(() => cantidad - nuevaCantidad);
-    }
-
-    if (cantidad == cartCount) {
-      console.log("Cantidad es igual CartCount");
-    }
   };
 
-  return <CartContext.Provider value={{ cartItems, cartCount, addItem, eliminarItem, vaciarCarrito, precioTotal }}>{children}</CartContext.Provider>;
+  const totalCompra = () => {
+    return cartItems.reduce((acum, item) => acum + item.precio * item.cantidad, 0);
+  };
+
+  return <CartContext.Provider value={{ cartItems, cartCount, addItem, eliminarItem, vaciarCarrito, totalCompra }}>{children}</CartContext.Provider>;
 }
 
 export { CartContext };

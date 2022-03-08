@@ -8,7 +8,7 @@ function Cart() {
   console.log("Item en Carrito=>", cartItems);
   const { eliminarItem } = useCartContext();
   const { vaciarCarrito } = useCartContext();
-  const { precioTotal } = useCartContext();
+  const { totalCompra } = useCartContext();
 
   return (
     <>
@@ -32,7 +32,6 @@ function Cart() {
                   <TiTrash style={{ width: "35", height: "35" }} />
                 </button>
               </div>
-              <p>{precioTotal(cartItems)}</p>
             </>
           );
         })
@@ -41,9 +40,12 @@ function Cart() {
       {cartItems.length === 0 ? (
         ""
       ) : (
-        <button className="btn btn-danger btnVaciarCarrito" onClick={vaciarCarrito}>
-          Vaciar Carrito
-        </button>
+        <>
+          <p className="titulos">Total $ {totalCompra()} </p>
+          <button className="btn btn-danger btnVaciarCarrito" onClick={vaciarCarrito}>
+            Vaciar Carrito
+          </button>
+        </>
       )}
     </>
   );
