@@ -22,5 +22,3 @@ Si quieres ponerte en contacto conmigo puedes encotrarme en LinkedIn.
 
 - [Francisco Calderon](https://www.linkedin.com/in/francalders67/)
 
-Hola! En este proyecto vamos a desarrollar una tienda de la franquicia de Star Wars.
-El proyecto es para el curso de ReactJS de Coder House.
