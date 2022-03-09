@@ -14,10 +14,12 @@ function Cart() {
     <>
       {cartItems.length === 0 ? (
         <>
-          <h1 className="titulos">Carrito Vacio</h1>
-          <Link to="/" className="regresarInicio">
-            Vuelve a ver todos nuestros productos
-          </Link>
+          <div className="columnFlex">
+            <h1 className="titulos">Carrito Vacio</h1>
+            <Link to="/" className="regresarInicio">
+              Vuelve a ver todos nuestros productos
+            </Link>
+          </div>
         </>
       ) : (
         cartItems.map((i) => {
@@ -41,7 +43,7 @@ function Cart() {
         ""
       ) : (
         <>
-          <p className="titulos">Total $ {totalCompra()} </p>
+          <p className="totalCompra">Total $ {totalCompra()} </p>
           <button className="btn btn-danger btnVaciarCarrito" onClick={vaciarCarrito}>
             Vaciar Carrito
           </button>

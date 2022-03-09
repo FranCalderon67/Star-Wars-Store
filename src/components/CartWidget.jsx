@@ -19,7 +19,9 @@ const CartWidget = ({ cantidad }) => {
                 height: "40",
               }}
             />
-            <span>{cantidad}</span>
+            <span>
+              <button className="numeroCarrito">{cantidad}</button>
+            </span>
           </Link>
         </li>
       </>
