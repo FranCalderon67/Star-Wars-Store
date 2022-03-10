@@ -3,37 +3,40 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../App.css";
 import ItemList from "./ItemList";
-import { traerProductos } from "./productos";
+import db from "../services/firebase";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 function ItemListContainer() {
   const [productos, setProductos] = useState([]);
   const [cargando, setCargando] = useState(true);
   const { categoria } = useParams();
 
-  useEffect(() => {
+  const getData = async () => {
     try {
-      if (categoria) {
-        traerProductos.then((res) => {
-          let resultado = res.filter((elemento) => {
-            let mostrarProducto = "";
-            if (elemento.categoria === categoria) {
-              mostrarProducto = elemento;
-            }
-            return mostrarProducto;
-          });
-
-          setProductos(resultado);
-          setCargando(false);
-        });
-      } else {
-        traerProductos.then((res) => {
-          setProductos(res);
-          setCargando(false);
-        });
-      }
+      const itemCollection = collection(db, "productos");
+      const col = await getDocs(itemCollection);
+      const result = col.docs.map((doc) => (doc = { id: doc.id, ...doc.data() }));
+      setProductos(result);
+      setCargando(false);
     } catch (error) {
-      console.log(error);
+      console.log("error", error);
     }
+  };
+
+  const getDataCategoryQuery = async () => {
+    try {
+      const consulta = query(collection(db, "productos"), where("categoria", "==", categoria));
+      const querySnapShot = await getDocs(consulta);
+
+      setProductos(querySnapShot.map((doc) => (doc = { id: doc.id, ...doc.data() })));
+      setCargando(false);
+    } catch (error) {
+      console.log("error", error);
+    }
+  };
+
+  useEffect(() => {
+    categoria ? getDataCategoryQuery() : getData();
   }, [categoria]);
 
   return (

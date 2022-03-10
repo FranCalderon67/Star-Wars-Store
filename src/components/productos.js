@@ -123,7 +123,7 @@ const productos = [
     precio: 500,
     imagen: "https://www.aceroymagia.com/Images/articulo/sable-de-luz-mace-windu-starwars/01-sable-de-luz-mace-windu-starwars.jpg",
     descripcion:
-      "Crea el suyo: el juguete de sable láser Forge Mace Windu está compuesto de cuatro partes: la hoja, la tapa, la cubierta y el núcleo, lo que permite a los niños montar su sable de luz para duelos imaginarios. Encendedor personalizable: las piezas son compatibles en toda la línea de forja de sable de luz para que los niños puedan mezclar y combinar. La compra de un solo sable de luz adicional desbloquea 16 combinaciones totale",
+      "Crea el suyo: el juguete de sable láser Forge Mace Windu está compuesto de cuatro partes: la hoja, la tapa, la cubierta y el núcleo, lo que permite a los niños montar su sable de luz para duelos imaginarios. Encendedor personalizable: las piezas son compatibles en toda la línea de forja de sable de luz para que los niños puedan mezclar y combinar. La compra de un solo sable de luz adicional desbloquea 16 combinaciones totales",
   },
   {
     categoria: "jedi",
@@ -399,7 +399,7 @@ const productos = [
     stock: 5,
     imagen: "https://http2.mlstatic.com/D_NQ_NP_985629-MLA32411122026_102019-O.jpg",
     descripcion:
-      "Rogue One: Una historia de Star Wars es una película apasionante por el esmero en retratar la ambigüedad moral de sus personajes, la rebelión y la esperanza, a la que sus protagonistas se aferran para cambiar el rumbo de su historia. Muy recomendable ver todos esos diseños y procesos para poner en pie el relato.5 abr 2017",
+      "Rogue One: Una historia de Star Wars es una película apasionante por el esmero en retratar la ambigüedad moral de sus personajes, la rebelión y la esperanza, a la que sus protagonistas se aferran para cambiar el rumbo de su historia. Muy recomendable ver todos esos diseños y procesos para poner en pie el relato.",
   },
   {
     categoria: "pelicula",
