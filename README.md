@@ -11,6 +11,7 @@ Consiste en un bot de una página de E-Commerce.
 - JavaScript
 - Bootstrap
 - CSS
+- Firebase
 
 ### Funcionalidad
 
