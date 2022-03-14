@@ -26,9 +26,9 @@ function ItemListContainer() {
   const getDataCategoryQuery = async () => {
     try {
       const consulta = query(collection(db, "productos"), where("categoria", "==", categoria));
-      const querySnapShot = await getDocs(consulta);
+      const QuerySnapshot = await getDocs(consulta);
 
-      setProductos(querySnapShot.map((doc) => (doc = { id: doc.id, ...doc.data() })));
+      setProductos(QuerySnapshot.docs.map((doc) => (doc = { id: doc.id, ...doc.data() })));
       setCargando(false);
     } catch (error) {
       console.log("error", error);

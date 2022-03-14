@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
+import Pago from "./components/Pago";
 import Cart from "./components/Cart";
 import { CartProvider } from "./components/CartContext";
 
@@ -20,6 +21,7 @@ function App() {
             <Route path="/" element={<ItemListContainer />} />
             <Route path="/productos/:id" element={<ItemDetailContainer />} />
             <Route path="/carrito" element={<Cart />} />
+            <Route path="/carrito/finalizarcompra" element={<Pago />} />
           </Routes>
         </BrowserRouter>
       </CartProvider>

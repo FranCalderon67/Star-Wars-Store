@@ -47,6 +47,9 @@ function Cart() {
           <button className="btn btn-danger btnVaciarCarrito" onClick={vaciarCarrito}>
             Vaciar Carrito
           </button>
+          <Link to="./finalizarcompra">
+            <button className="btn btn-success btnVaciarCarrito">Realizar Pago</button>
+          </Link>
         </>
       )}
     </>

@@ -4,6 +4,7 @@ import BtnTerminarCompra from "./BtnTerminarCompra";
 import { Link } from "react-router-dom";
 import { useCartContext } from "./CartContext";
 import ItemCount from "./ItemCount";
+import swal from "sweetalert";
 
 function ItemDetail({ item }) {
   const [show, setShow] = useState(true);
@@ -23,8 +24,12 @@ function ItemDetail({ item }) {
   };
 
   function dobleFuncion() {
-    setShow(false);
-    addItem(item, contador);
+    if (contador === 0) {
+      swal("Atención!", "Debes elegir una cantidad a comprar", "warning");
+    } else {
+      setShow(false);
+      addItem(item, contador);
+    }
   }
 
   return (

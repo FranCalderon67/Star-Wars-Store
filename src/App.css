@@ -223,6 +223,26 @@
   align-content: center;
 }
 
+.forms {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  padding: 1rem;
+  width: 30rem;
+  font-family: "IM Fell Double Pica", serif;
+}
+
+.innerForm {
+  background-color: #000000;
+  color: #ffffff;
+  caret-color: red;
+}
+
+.btnPagar {
+  margin: 2rem 0 1rem 10rem;
+  width: 5rem;
+}
+
 @media (max-width: 1024px) {
   .flexDetail {
     margin: 0 0 0 1rem;
