@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 function Cart() {
   const { cartItems } = useCartContext();
-  console.log("Item en Carrito=>", cartItems);
   const { eliminarItem } = useCartContext();
   const { vaciarCarrito } = useCartContext();
   const { totalCompra } = useCartContext();
