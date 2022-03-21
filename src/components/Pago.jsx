@@ -11,11 +11,19 @@ function FormularioCompra() {
   const { cartItems } = useCartContext();
   const { vaciarCarrito } = useCartContext();
 
+  const validateEmail = (email) => {
+    return String(email)
+      .toLowerCase()
+      .match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+  };
+
   const sendOrder = async (e) => {
     e.preventDefault();
     let order;
-    if (e.target[0].value === "") {
+    if (e.target[0].value === "" || e.target[2].value === "" || e.target[3].value === "") {
       swal("Cuidado!", "Debes completar todos los campos", "error");
+    } else if (validateEmail(e.target[1].value) === null) {
+      swal("Cuidado!", "Direccion de mail incorrecta", "error");
     } else {
       order = {
         comprador: {
@@ -33,7 +41,6 @@ function FormularioCompra() {
     const orderCollection = collection(db, "orders");
     try {
       const newDoc = await addDoc(orderCollection, order);
-      console.log(newDoc.id);
 
       swal("Felicitaciones", `Tu orden es la ${newDoc.id}`, "success");
       vaciarCarrito();
