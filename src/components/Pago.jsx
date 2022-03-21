@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { useCartContext } from "./CartContext";
-import { collection, Timestamp, addDoc, getDocs } from "firebase/firestore";
+import { collection, Timestamp, addDoc } from "firebase/firestore";
 
 import { Link } from "react-router-dom";
 import "../App.css";
@@ -10,7 +10,6 @@ import swal from "sweetalert";
 function FormularioCompra() {
   const { cartItems } = useCartContext();
   const { vaciarCarrito } = useCartContext();
-  const [orderId, setOrderId] = useState();
 
   const sendOrder = async (e) => {
     e.preventDefault();
@@ -34,23 +33,9 @@ function FormularioCompra() {
     const orderCollection = collection(db, "orders");
     try {
       const newDoc = await addDoc(orderCollection, order);
-      console.log(newDoc);
-    } catch (error) {
-      console.log("error=>", error);
-    }
+      console.log(newDoc.id);
 
-    getOrder();
-  };
-
-  const getOrder = async () => {
-    try {
-      const orderCollection = collection(db, "orders");
-      const querySnapshot = await getDocs(orderCollection);
-      querySnapshot.forEach((doc) => {
-        setOrderId(doc.id, doc.data());
-      });
-      console.log(orderId);
-      swal("Felicitaciones", `Tu orden es la ${orderId}`, "success");
+      swal("Felicitaciones", `Tu orden es la ${newDoc.id}`, "success");
       vaciarCarrito();
     } catch (error) {
       console.log("error=>", error);
