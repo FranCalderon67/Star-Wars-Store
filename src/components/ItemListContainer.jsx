@@ -37,7 +37,7 @@ function ItemListContainer() {
 
   useEffect(() => {
     categoria ? getDataCategoryQuery() : getData();
-  }, [categoria]);
+  });
 
   return (
     <>

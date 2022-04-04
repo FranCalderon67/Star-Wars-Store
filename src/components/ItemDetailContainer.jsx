@@ -24,7 +24,7 @@ function ItemDetailContainer() {
 
   useEffect(() => {
     getElegido();
-  }, [id]);
+  });
 
   return <>{cargando ? <ItemDetail item={producto} /> : <img className="sable" src={require("../imagenes/pagina/sable.png")} alt="ERROR"></img>}</>;
 }

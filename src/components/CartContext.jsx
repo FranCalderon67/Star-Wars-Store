@@ -8,9 +8,9 @@ function CartProvider({ children }) {
   const [cartCount, setCartCount] = useState(0);
 
   const addItem = (item, cantidad) => {
-    if (cartItems.some((producto) => producto.id == item.id)) {
+    if (cartItems.some((producto) => producto.id === item.id)) {
       const copy = [...cartItems];
-      const itemRepetido = cartItems.findIndex((producto) => producto.id == item.id);
+      const itemRepetido = cartItems.findIndex((producto) => producto.id === item.id);
       copy[itemRepetido] = { ...copy[itemRepetido], cantidad: copy[itemRepetido].cantidad + cantidad };
 
       setCartItems(copy);
